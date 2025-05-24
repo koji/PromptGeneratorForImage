@@ -8,8 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      SPACE_NAME: PromptGenerator
+    # env:
+    #   SPACE_NAME: PromptGenerator
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,5 +26,5 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }} # use hf_token from GitHub secrets
         run: |
           # add hugging face space as remote
-          git remote add space https://baxin:${HF_TOKEN}@huggingface.co/spaces/baxin/${SPACE_NAME}
+          git remote add space https://baxin:${HF_TOKEN}@huggingface.co/spaces/baxin/PromptGenerator
           git push --force space edge:main
