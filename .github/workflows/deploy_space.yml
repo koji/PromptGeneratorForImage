@@ -3,7 +3,7 @@ name: Deploy to Hugging Face Spaces
 on:
   push:
     branches:
-      - edge # when main branch is pushed
+      - main # when main branch is pushed
 
 jobs:
   deploy:
