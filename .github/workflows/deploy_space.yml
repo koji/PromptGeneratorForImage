@@ -27,4 +27,4 @@ jobs:
         run: |
           # add hugging face space as remote
           git remote add space https://baxin:${HF_TOKEN}@huggingface.co/spaces/baxin/PromptGenerator
-          git push --force space edge:main
+          git push --force space main:main
